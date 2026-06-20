@@ -10,11 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-    CharacterController controller;
-
-    Vector3 velocity;
-
-    bool isGrounded;
+    private CharacterController controller;
+    private Vector3 velocity;
+    private bool isGrounded;
 
     void Start()
     {
@@ -25,20 +23,20 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // cek menyentuh tanah
+        // Cek menyentuh tanah
         isGrounded = Physics.CheckSphere(
             groundCheck.position,
             groundDistance,
             groundMask
         );
 
-        // reset gravity
+        // Reset gravity saat menyentuh tanah
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        // input movement
+        // Input movement
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -46,13 +44,13 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        // lompat
+        // Lompat
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        // gravity
+        // Gravity
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);

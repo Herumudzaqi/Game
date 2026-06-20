@@ -7,7 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
-    guid: 35d14b558890d7041ac9fde9d31a8590
+    guid: 5fea7cc90357cd94da01bd628ebce527
+  - enabled: 1
+    path: Assets/Scenes/Pilih Level.unity
+    guid: 7cbe7a98cba140a48b984cfd70b6361c
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 68c44266c2b705a4d97ab6b4c70a1053
