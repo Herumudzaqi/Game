@@ -167,6 +167,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
+    Android: com.herumudzaqi.finaldoor
     Standalone: com.Unity-Technologies.com.unity.template.hdrp-blank
   buildNumber:
     Standalone: 0
@@ -971,7 +972,7 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
   captureStartupLogs: {}
-  activeInputHandler: 2
+  activeInputHandler: 1
   windowsGamepadBackendHint: 0
   cloudProjectId: 12584530-912b-470a-bd30-f860bc86ff06
   framebufferDepthMemorylessMode: 0

@@ -1,10 +1,19 @@
 # ninja log v5
 24	2764	8036531759743689	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a9f9dcda01b04f26
 34	2773	8036531759794054	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	af08f05eb8757d09
-17	2807	8036531760181686	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ab1a7759f6a0e0b3
-56	2837	8036531760485207	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	77f0ecac606939d5
-1	2926	8036531761365352	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	179aec5249223b71
 67	3090	8036531763040041	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	6ace1cb75690124f
+17	2807	8036531760181686	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ab1a7759f6a0e0b3
+1	2926	8036531761365352	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	179aec5249223b71
+56	2837	8036531760485207	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	77f0ecac606939d5
 46	3131	8036531763462414	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	eeafb817f70c8e94
 9	3268	8036531764761679	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c5e5f48b16ef14a
 3269	3443	8036531766621891	D:/Game Desain/UTS FPS/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6y3v3n2e/obj/arm64-v8a/libgame.so	b6d6186591b48d7c
+63	2220	8045410524231276	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	a9f9dcda01b04f26
+30	2223	8045410524296393	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	af08f05eb8757d09
+20	2255	8045410524584594	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ab1a7759f6a0e0b3
+45	2268	8045410524743206	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	77f0ecac606939d5
+38	2344	8045410525432111	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	179aec5249223b71
+55	2508	8045410527152185	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	eeafb817f70c8e94
+11	2627	8045410528294581	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	c5e5f48b16ef14a
+71	2911	8045410531143413	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	6ace1cb75690124f
+2912	3121	8045410533288898	D:/Game Desain/UTS FPS/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6y3v3n2e/obj/arm64-v8a/libgame.so	b6d6186591b48d7c

@@ -2,10 +2,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Movement")]
     public float speed = 5f;
     public float gravity = -9.81f;
     public float jumpHeight = 2f;
 
+    [Header("Joystick")]
+    public FixedJoystick joystick;
+
+    [Header("Ground Check")]
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -14,45 +19,51 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;
     private bool isGrounded;
 
-    void Start()
+    private void Start()
     {
         controller = GetComponent<CharacterController>();
-
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    private void Update()
     {
-        // Cek menyentuh tanah
+        // Ground Check
         isGrounded = Physics.CheckSphere(
             groundCheck.position,
             groundDistance,
             groundMask
         );
 
-        // Reset gravity saat menyentuh tanah
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        // Input movement
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        // =======================
+        // JOYSTICK
+        // =======================
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        // Dibalik karena arah player terbalik
+        float x = -joystick.Horizontal;
+        float z = -joystick.Vertical;
 
-        controller.Move(move * speed * Time.deltaTime);
+        Vector3 move = (transform.right * x) + (transform.forward * z);
 
-        // Lompat
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        controller.Move(move.normalized * speed * Time.deltaTime);
+
+        // =======================
+        // GRAVITY
+        // =======================
+
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+    }
+
+    // Dipanggil dari tombol Jump
+    public void Jump()
+    {
+        if (isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-
-        // Gravity
-        velocity.y += gravity * Time.deltaTime;
-
-        controller.Move(velocity * Time.deltaTime);
     }
 }
